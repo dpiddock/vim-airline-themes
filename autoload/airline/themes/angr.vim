@@ -41,10 +41,9 @@ let g:airline#themes#angr#palette.insert_paste = {
       \ }
 
 " Replace mode
-let g:airline#themes#angr#palette.replace = {
-      \ 'airline_a': [s:gui_dark_gray, s:gui_red, s:cterm_dark_gray, s:cterm_red, ''],
-      \ 'airline_c': [s:gui_red, s:gui_med_gray_hi, s:cterm_red, s:cterm_med_gray_hi, ''],
-      \ }
+let s:R1 = [s:gui_dark_gray, s:gui_red, s:cterm_dark_gray, s:cterm_red]
+let s:R3 = [s:gui_red, s:gui_med_gray_hi, s:cterm_red, s:cterm_med_gray_hi]
+let g:airline#themes#angr#palette.replace = airline#themes#generate_color_map(s:R1, s:N2, s:R3)
 let g:airline#themes#angr#palette.replace_modified = copy(g:airline#themes#angr#palette.insert_modified)
 
 " Visual mode
